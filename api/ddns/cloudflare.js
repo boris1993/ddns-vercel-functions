@@ -79,7 +79,6 @@ async function sendGetRequest(options) {
             resp.on("data", (chunk) => data += chunk);
             resp.on("end", () => {
                 let response_obj = JSON.parse(data);
-                console.debug(response_obj);
 
                 resolve(response_obj);
             });
@@ -104,7 +103,6 @@ async function sendPutRequest(options, params) {
             resp.on("data", (chunk) => data += chunk);
             resp.on("end", () => {
                 let response_obj = JSON.parse(data);
-                console.debug(response_obj);
 
                 resolve(response_obj["success"]);
             });
