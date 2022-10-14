@@ -1,0 +1,13 @@
+{
+	"name": "ddns-vercel-functions",
+	"version": "1.0.0",
+	"main": "handler.js",
+	"license": "MIT",
+	"scripts": {
+		"start": "vercel dev",
+		"deploy": "vercel deploy --prod"
+	},
+	"devDependencies": {
+		"@vercel/node": "^2.5.24"
+	}
+}
