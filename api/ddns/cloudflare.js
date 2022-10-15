@@ -28,7 +28,7 @@ export default async function handler(request, response) {
     let { id: domainId, content } = results[0];
     console.log(`Record ID of ${domain} is ${domainId}`);
 
-    if (content == address) {
+    if (content === address) {
         console.log("Address not changed. Aborting.");
         return sendResponse(response, 200, "nochg");
     }
