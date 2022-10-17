@@ -30,7 +30,7 @@ export default async function handler(request, response) {
 
     if (content === address) {
         console.log("Address not changed. Aborting.");
-        return sendResponse(response, 200, "nochg");
+        return sendResponse(response, 304, "nochg");
     }
 
     let isSuccess = await updateAddressForRecord(token, zoneId, domainId, domain, address);
